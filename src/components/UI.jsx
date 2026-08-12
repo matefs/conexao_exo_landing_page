@@ -1,7 +1,8 @@
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 
 export function Button({ children, href = '#form', variant = 'lime' }) {
-  return <a className={`button button--${variant}`} href={href}>{children}<ArrowUpRight size={17} aria-hidden="true" /></a>
+  const external = href.startsWith('http')
+  return <a className={`button button--${variant}`} href={href} target={external ? '_blank' : undefined} rel={external ? 'noreferrer' : undefined}>{children}<ArrowUpRight size={17} aria-hidden="true" /></a>
 }
 
 export function Eyebrow({ children, dark = false }) {

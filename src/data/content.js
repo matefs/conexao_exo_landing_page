@@ -1,76 +1,61 @@
+export const whatsappNumber = '5548991109531'
+export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Encontrei a Conexão EXO pelo site e quero conhecer as experiências disponíveis. Podem me ajudar?')}`
+
 export const navigation = [
-  { label: 'Home', href: '#inicio' },
-  { label: 'Lideranças', href: '#solucoes' },
-  { label: 'Team Building', href: '#experiencias' },
-  { label: 'Saúde Mental', href: '#solucoes' },
-  { label: 'Cases e Blog', href: '#depoimentos' },
-  { label: 'Fale Conosco', href: '#form' },
+  { label: 'Início', href: '#inicio' },
+  { label: 'Vivências', href: '#vivencias' },
+  { label: 'Veleiro', href: '#veleiro' },
+  { label: 'Sobre', href: '#sobre' },
+  { label: 'Avaliações', href: '#avaliacoes' },
+  { label: 'Contato', href: '#contato' },
 ]
 
-export const impactNumbers = [
-  { value: '+550', label: 'treinamentos realizados' },
-  { value: '+300', label: 'empresas atendidas' },
-  { value: '+40.000', label: 'pessoas impactadas' },
-  { value: '+18', label: 'anos transformando equipes' },
-]
-
-export const methodQuestions = [
-  'Como as pessoas realmente mudam?',
-  'Como equipes aprendem juntas?',
-  'Como a aprendizagem se torna significativa?',
-  'Como fazer com que a transformação continue?',
-]
-
-export const methodology = [
-  { number: '01', icon: 'brain', title: 'Design Comportamental', lead: 'Novas perspectivas transformam comportamentos.', text: 'Criamos experiências que ampliam a consciência, desafiam padrões automáticos e ajudam cada pessoa a enxergar novas possibilidades de agir.' },
-  { number: '02', icon: 'users', title: 'Design de Conexões', lead: 'Relações genuínas impulsionam a aprendizagem.', text: 'Criamos ambientes onde cargos, conflitos e julgamentos dão lugar à confiança, à colaboração e às conversas que realmente aproximam as pessoas.' },
-  { number: '03', icon: 'sparkles', title: 'Design Experiencial', lead: 'Aprender é viver a experiência.', text: 'Cada atividade tem um propósito. Corpo, emoção e reflexão caminham juntos para que o aprendizado seja vivido, e não apenas explicado.' },
-  { number: '04', icon: 'fingerprint', title: 'People Design', lead: 'O contexto das pessoas orienta cada experiência.', text: 'Nenhuma equipe é igual à outra. Cada jornada nasce da realidade, da cultura e dos desafios de quem participa para que a transformação faça sentido e permaneça depois da experiência.' },
-]
-
-export const solutions = [
-  { title: 'Liderança', text: 'Desenvolvemos líderes preparados para inspirar, comunicar, decidir e conduzir equipes de alta performance.', image: '/assets/solution-leadership.webp' },
-  { title: 'Team Building', text: 'Experiências que fortalecem confiança, colaboração, comunicação e senso de pertencimento entre equipes.', image: '/assets/solution-team.webp' },
-  { title: 'Saúde Mental e NR1', text: 'Programas voltados ao bem-estar físico, emocional e relacional, promovendo ambientes mais saudáveis e produtivos.', image: '/assets/solution-health.webp' },
+export const categories = [
+  { title: 'Água', lead: 'Entre no ritmo do mar.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/floripa/ilha-do-frances.jpg' },
+  { title: 'A bordo', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/floripa/santo-antonio-de-lisboa.jpg' },
+  { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/floripa/praia-mole.jpg' },
+  { title: 'Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/floripa/lagoinha-do-leste.jpg' },
 ]
 
 export const experiences = [
-  { title: 'Go Team', text: 'Integração que une o time em torno de um objetivo comum.', image: '/assets/experience-go-team.webp' },
-  { title: 'Innovation Highway', text: 'Desafios sob pressão que estimulam criatividade e decisão.', image: '/assets/experience-innovation.webp' },
-  { title: 'Canoa Havaiana', text: 'Remada coletiva que só avança em total sincronia.', image: '/assets/experience-canoa.webp' },
-  { title: 'Cozinha Corporativa', text: 'Cozinhar juntos sob tempo, metas e papéis definidos.', image: '/assets/experience-cozinha.webp' },
-  { title: 'Sprint de equipe', text: 'Menos teoria, mais ação. O time entra, participa, aplica na prática e sai mais engajado.', image: '/assets/experience-sprint.webp' },
+  { title: 'Stand up paddle em Jurerê', text: 'Entre no mar, movimente o corpo e contemple Jurerê com calma.', image: '/assets/floripa/jurere.jpg', message: 'stand up paddle em Jurerê' },
+  { title: 'Caiaque', text: 'Reme em águas tranquilas e aproveite a paisagem no seu ritmo.', image: '/assets/floripa/jurere.jpg', message: 'passeio de caiaque' },
+  { title: 'Expedição à Ilha do Francês', text: 'Explore o mar em uma vivência de stand up paddle marcante.', image: '/assets/floripa/ilha-do-frances.jpg', message: 'expedição à Ilha do Francês' },
+  { title: 'Trilhas em Florianópolis', text: 'Conheça paisagens como Lagoinha do Leste, Costa da Lagoa e Gravatá.', image: '/assets/floripa/lagoinha-do-leste.jpg', message: 'trilhas em Florianópolis' },
+  { title: 'Voo duplo de parapente', text: 'Sinta o vento e observe a Ilha da Magia de um novo ponto de vista.', image: '/assets/floripa/praia-mole.jpg', message: 'voo duplo de parapente' },
+  { title: 'Salto duplo de paraquedismo', text: 'Transforme coragem em uma história que você não vai esquecer.', image: '/assets/difference-4.webp', message: 'salto duplo de paraquedismo' },
 ]
 
-export const reasons = [
-  { title: 'Metodologia Outside the Box', text: 'Experiências que rompem com o modelo tradicional de treinamento.', image: '/assets/difference-1.webp' },
-  { title: 'Programas Personalizados', text: 'Cada projeto é desenvolvido conforme os objetivos e desafios da empresa.', image: '/assets/difference-2.webp' },
-  { title: 'Impacto Mensurável', text: 'Avaliamos resultados para garantir que o aprendizado gere transformação.', image: '/assets/difference-3.webp' },
-  { title: 'Parceiros Estratégicos', text: 'Atuamos lado a lado com nossos clientes na construção de equipes mais fortes.', image: '/assets/difference-4.webp' },
+export const audiences = [
+  ['Primeira experiência', 'Conte suas dúvidas e descubra uma vivência possível para o seu momento.'],
+  ['Casais, amigos e famílias', 'Troque o programa de sempre por natureza e novas histórias para compartilhar.'],
+  ['Quem visita Floripa', 'Conheça a Ilha da Magia para além dos roteiros mais óbvios.'],
+  ['Quem mora na região', 'Redescubra o que está perto e aproveite o lugar onde você vive.'],
+  ['Momentos especiais', 'Pré-wedding, ensaios e celebrações em um cenário diferente.'],
+  ['Grupos e empresas', 'Experiências corporativas e de lazer em formatos combinados previamente.'],
 ]
 
-export const testimonials = [
-  { quote: 'O trabalho da OutBox foi exatamente o que buscávamos para o nosso encontro de time: transformar conceitos complexos como trabalho em equipe, liderança e tomada de decisão em uma experiência prática e envolvente. A condução da equipe fez toda a diferença, proporcionando um momento inspirador que fortaleceu nosso time e renovou nossas energias.', author: 'Renan V.', role: 'Logistics Executive Manager, Suzano' },
-  { quote: 'Ao conciliar a experiência outdoor com um conteúdo teórico atualizado, como faz a OutBox, juntam-se itens cruciais para a alta performance coletiva. Os resultados disso no dia a dia do time são notáveis.', author: 'Grupo Quattuor', role: 'Corporate Strategy & Digital Solutions Manager' },
-  { quote: 'Foi o melhor treinamento que tivemos até hoje! O conteúdo foi excelente e a semente foi plantada de forma muito assertiva. Agradeço ao time OutBox por esta conquista e pela parceria que tiveram comigo.', author: 'Patricia Quiquio', role: 'RH, DC Logistics' },
+export const steps = [
+  ['01', 'Escolha o que quer viver', 'Explore água, bordo, ar e terra. Se estiver em dúvida, conte que tipo de dia você gostaria de ter.'],
+  ['02', 'Chame no WhatsApp', 'Informe a experiência, a data desejada, o número de pessoas e qualquer necessidade importante.'],
+  ['03', 'Confirme os detalhes', 'Receba disponibilidade, valor, ponto de encontro, duração e orientações da atividade.'],
+  ['04', 'Viva a experiência', 'Chegue no horário combinado, siga as orientações e aproveite sua conexão com a natureza.'],
 ]
 
-export const googleReviews = [
-  { author: 'Yara Probst Becker', time: '1 mês atrás', avatar: '/assets/unnamed.png', text: 'Equipe maravilhosa, treinamento muito bom!' },
-  { author: 'Villa Jeriva', time: '1 mês atrás', avatar: '/assets/unnamed(1).png', text: 'Treinamentos incríveis, conduzidos sempre com muito profissionalismo e leveza. Recomendamos!' },
-  { author: 'Rafaela Souza', time: '1 mês atrás', avatar: '/assets/unnamed(2).png', text: 'Empresa séria. Tive uma experiência incrível e com certeza voltarei a fazer negócio com vocês! Parabéns pela equipe!' },
-  { author: 'Tiago Lau', time: '1 mês atrás', avatar: '/assets/unnamed(3).png', text: 'Sou gestor de RH e há 3 anos conto com a parceria da OutBox para eventos de Team Building e eles sempre me surpreendem. Super recomendo!' },
-  { author: 'Cristiano Mueller', time: '2 meses atrás', avatar: '/assets/unnamed(4).png', text: 'A empresa se destaca pela qualidade dos programas de desenvolvimento de liderança, team building, integração de equipes, cultura organizacional e desenvolvimento humano. Cada treinamento é planejado com atenção aos objetivos do cliente.' },
-  { author: 'André Vinicius Flores', time: '2 meses atrás', avatar: '/assets/unnamed(5).png', text: 'A melhor empresa de Treinamentos Corporativos do Brasil. Experiência de aprendizados e transformações.' },
-  { author: 'Jaylei Gonçalves', time: '2 meses atrás', avatar: '/assets/unnamed(6).png', text: 'OutBox, literalmente fora da caixa. São atividades lúdicas, de presença e escuta, que exigem engajamento, colaboração e cooperação e trazem reflexões reais sobre o dia a dia profissional.' },
-  { author: 'Rebeka Teixeira', time: '2 meses atrás', avatar: '/assets/unnamed(7).png', text: 'Amei a experiência! Senti todo o cuidado, atenção e profissionalismo em cada detalhe. Parabéns pelo excelente trabalho!' },
-  { author: 'Matheus Araújo', time: '2 meses atrás', avatar: '/assets/unnamed(8).png', text: 'Treinamento excelente! A OutBox conduziu tudo de forma clara, leve e muito profissional. Nossa equipe saiu com ótimos aprendizados. Recomendo!' },
-  { author: 'Lucas Aguiar', time: '2 meses atrás', avatar: '/assets/unnamed(9).png', text: 'Dinâmicas muito diferentes. Fiquei impressionado com a experiência — foi muito mais do que um treinamento. Atendimento sensacional!' },
+export const reviews = [
+  { author: 'Millena Leticia Wronski Ferrarini', text: 'Aluguei um stand up paddle aqui e tive uma experiência excelente! O equipamento estava em perfeito estado, super bem conservado e seguro. Everton foi muito atencioso, explicou tudo direitinho e passou bastante confiança, principalmente pra quem está começando.' },
+  { author: 'Marcelo Lorensetti', text: 'Experiência fantástica. Vale muito a pena fazer um passeio com caiaque: local de águas calmas, muitos veleiros, vistas incríveis e pessoal muito atencioso!' },
+  { author: 'Lucas de Castro', text: 'Adoramos o passeio de caiaque que fizemos com o Everton Camarão. Minha esposa tinha medo e sentiu muita confiança nele. Deu tudo certo, o passeio foi ótimo e super seguro.' },
+  { author: 'Maria Helena Forcineti Rocha', text: 'Vivi uma experiência única com a Conexão EXO. Everton e Marina são simplesmente maravilhosos! Foi uma das experiências mais maravilhosas que já vivemos.' },
+  { author: 'Letícia Parizotto', text: 'Sempre somos super bem atendidos quando vamos para Florianópolis praticar caiaque e stand up. Os equipamentos estão sempre em ótimo estado e o Everton é muito gentil e ótimo instrutor.' },
+  { author: 'Leandro Cunha', text: 'Foi sensacional. Desde o agendamento até o passeio foi demais. Voltaremos um dia.' },
 ]
 
-export const clients = [
-  ['Claro', 'claro-cinza-150x150.png.webp'], ['Coca-Cola', 'coca-cola-cinza-150x150.png.webp'],
-  ['DC Logística', 'dc-logistica-cinza-150x150.png.webp'], ['Suzano', 'cliente-treinamento-empresarial-grupo-suzano-150x150.png.webp'],
-  ['Findes', 'findes-cinza-150x150.png.webp'], ['Grupo Boticário', 'grupo-boticario-cinza-150x150.png.webp'],
-  ['Hiper Freios', 'hiper-freios-cinza-150x150.png.webp'],
+export const faqs = [
+  ['Nunca pratiquei a atividade. Posso participar?', 'Algumas vivências recebem iniciantes. Conte sua experiência, idade, necessidades e dúvidas antes de reservar para receber a orientação adequada.'],
+  ['Como faço uma reserva?', 'Chame no WhatsApp (48) 99110-9531, informe a vivência, a data e o número de pessoas. A reserva depende da confirmação de disponibilidade e das condições.'],
+  ['O que está incluído?', 'Equipamentos, duração, acompanhamento, ponto de encontro e demais detalhes variam conforme a vivência e são confirmados no atendimento.'],
+  ['As experiências dependem do clima?', 'Atividades ao ar livre podem depender do tempo e do ambiente. A equipe informará qualquer orientação ou alteração necessária.'],
+  ['Crianças podem participar?', 'Depende da atividade, da idade e das condições específicas. Consulte a equipe antes de reservar.'],
+  ['Onde acontecem as vivências?', 'A Conexão EXO está em Jurerê, e as experiências acontecem em diferentes pontos de Florianópolis e região. O local é confirmado no atendimento.'],
 ]

@@ -3,7 +3,7 @@ import { ArrowLink } from './UI'
 export function ImageCard({ item, index, compact = false }) {
   return <article className={`image-card ${compact ? 'image-card--compact' : ''}`} style={{ backgroundImage: `linear-gradient(180deg, transparent 20%, rgba(0,0,0,.9) 100%), url("${item.image}")` }}>
     <span className="image-card__number">0{index + 1}</span>
-    <div><h3>{item.title}</h3><p>{item.text}</p><ArrowLink>Saiba mais</ArrowLink></div>
+    <div><h3>{item.title}</h3><p>{item.lead || item.text}</p>{item.lead && <p>{item.text}</p>}<ArrowLink href={item.href}>Saiba mais</ArrowLink></div>
   </article>
 }
 

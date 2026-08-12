@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { navigation } from '../data/content'
 import { Button } from './UI'
+import { whatsappUrl } from '../data/content'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -18,11 +19,11 @@ export function Header() {
   }, [open])
   return <header className={`site-header ${scrolled ? 'site-header--scrolled' : ''}`}>
     <div className="header-inner">
-      <a href="#inicio" className="brand" aria-label="OutBox - início"><img src="/assets/logo.svg" alt="OutBox" /></a>
+      <a href="#inicio" className="brand exo-brand" aria-label="Conexão EXO - início">CONEXÃO <b>EXO</b><span>∞</span></a>
       <nav className={open ? 'nav nav--open' : 'nav'} aria-label="Navegação principal">
         {navigation.map(item => <a key={item.label} href={item.href} onClick={() => setOpen(false)}>{item.label}</a>)}
       </nav>
-      <div className="header-cta"><Button>Fale conosco</Button></div>
+      <div className="header-cta"><Button href={whatsappUrl}>Chamar no WhatsApp</Button></div>
       <button className="menu" onClick={() => setOpen(!open)} aria-label="Abrir menu" aria-expanded={open}>{open ? <X/> : <Menu/>}</button>
     </div>
   </header>
