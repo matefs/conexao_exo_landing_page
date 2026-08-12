@@ -1,5 +1,10 @@
 # Créditos das imagens de Florianópolis
 
+## mapa-florianopolis.png
+- Mapa local derivado, recolorido e anotado a partir de “SantaCatarina Municip Florianopolis.svg”, do Wikimedia Commons.
+- Autor da base: Cícero Henrique Rodrigues, a partir do trabalho de Raphael Lorenzeto de Abreu.
+- Licença da base: GFDL.
+
 As imagens desta pasta foram baixadas localmente para evitar dependências externas em produção. Todas têm origem no Wikimedia Commons.
 
 ## `ilha-do-frances.jpg`

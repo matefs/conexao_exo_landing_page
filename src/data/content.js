@@ -11,18 +11,18 @@ export const navigation = [
 ]
 
 export const categories = [
-  { title: 'Água', lead: 'Entre no ritmo do mar.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/floripa/ilha-do-frances.jpg' },
-  { title: 'A bordo', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/floripa/santo-antonio-de-lisboa.jpg' },
-  { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/floripa/praia-mole.jpg' },
-  { title: 'Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/floripa/lagoinha-do-leste.jpg' },
+  { title: 'Água', lead: 'Entre no ritmo do mar.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/experiencias/familia-caiaque.jpg', icon: 'waves' },
+  { title: 'A bordo', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship' },
+  { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/experiencias/voo-duplo-parapente.jpg', icon: 'wind' },
+  { title: 'Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/experiencias/amigos-trilha.jpg', icon: 'mountain' },
 ]
 
 export const experiences = [
-  { title: 'Stand up paddle em Jurerê', text: 'Entre no mar, movimente o corpo e contemple Jurerê com calma.', image: '/assets/floripa/jurere.jpg', message: 'stand up paddle em Jurerê' },
-  { title: 'Caiaque', text: 'Reme em águas tranquilas e aproveite a paisagem no seu ritmo.', image: '/assets/floripa/jurere.jpg', message: 'passeio de caiaque' },
-  { title: 'Expedição à Ilha do Francês', text: 'Explore o mar em uma vivência de stand up paddle marcante.', image: '/assets/floripa/ilha-do-frances.jpg', message: 'expedição à Ilha do Francês' },
-  { title: 'Trilhas em Florianópolis', text: 'Conheça paisagens como Lagoinha do Leste, Costa da Lagoa e Gravatá.', image: '/assets/floripa/lagoinha-do-leste.jpg', message: 'trilhas em Florianópolis' },
-  { title: 'Voo duplo de parapente', text: 'Sinta o vento e observe a Ilha da Magia de um novo ponto de vista.', image: '/assets/floripa/praia-mole.jpg', message: 'voo duplo de parapente' },
+  { title: 'Stand up paddle em Jurerê', text: 'Entre no mar, movimente o corpo e contemple Jurerê com calma.', image: '/assets/floripa/jurere.jpg', message: 'stand up paddle em Jurerê', icon: 'waves' },
+  { title: 'Caiaque', text: 'Reme em águas tranquilas e aproveite a paisagem no seu ritmo.', image: '/assets/experiencias/familia-caiaque.jpg', message: 'passeio de caiaque', icon: 'users' },
+  { title: 'Expedição à Ilha do Francês', text: 'Explore o mar em uma vivência de stand up paddle marcante.', image: '/assets/floripa/ilha-do-frances.jpg', message: 'expedição à Ilha do Francês', icon: 'compass' },
+  { title: 'Trilhas em Florianópolis', text: 'Conheça paisagens como Lagoinha do Leste, Costa da Lagoa e Gravatá.', image: '/assets/experiencias/amigos-trilha.jpg', message: 'trilhas em Florianópolis', icon: 'mountain' },
+  { title: 'Voo duplo de parapente', text: 'Sinta o vento e observe a Ilha da Magia de um novo ponto de vista.', image: '/assets/experiencias/voo-duplo-parapente.jpg', message: 'voo duplo de parapente', icon: 'wind' },
   { title: 'Salto duplo de paraquedismo', text: 'Transforme coragem em uma história que você não vai esquecer.', image: '/assets/difference-4.webp', message: 'salto duplo de paraquedismo' },
 ]
 
