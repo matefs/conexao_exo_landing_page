@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
-import { CalendarCheck, Check, Compass, MapPin, MessageCircle, Mouse, Users } from 'lucide-react'
+import { CalendarCheck, Check, Compass, MapPin, MessageCircle, Mouse } from 'lucide-react'
 import { cssVariables } from './theme'
 import { Header } from './components/Header'
 import { ArrowLink, Button, Eyebrow, SectionHeading } from './components/UI'
@@ -63,7 +63,7 @@ function App() {
 
       <section className="journey section" id="veleiro"><div className="journey__image"/><div className="wrap journey__content"><Eyebrow dark>Veleiro Crevette</Eyebrow><h2>O tempo muda quando você está a bordo.</h2><p>Até cinco pessoas navegando pela Baía Norte de Florianópolis, com privacidade e roteiro combinado.</p><div className="benefit-chips sailing-chips">{['Até 5 pessoas','Baía Norte','Rota de 4 horas','Rota de 8 horas','Roteiro personalizado'].map(item => <span key={item}><Check size={14}/>{item}</span>)}</div><div className="sailing-prices"><div><small>4 horas</small><strong>R$ 1.500</strong></div><div><small>8 horas</small><strong>R$ 2.500</strong></div><div><small>Personalizado</small><strong>Sob consulta</strong></div></div><p className="price-note">Valores, embarque, rota e disponibilidade sujeitos à confirmação.</p><Button href={experienceLink('o passeio no veleiro Crevette')}>Quero embarcar nessa</Button></div></section>
 
-      <section className="reasons section"><div className="wrap"><SectionHeading eyebrow="Do seu jeito" title="Há muitas formas de viver uma nova conexão."/><div className="difference-list">{audiences.slice(0,4).map(([title,text], index) => <article className="difference-card" key={title} style={{backgroundImage:`url('${['/assets/experiencias/familia-caiaque.jpg','/assets/experiencias/familia-natureza.jpg','/assets/experiencias/amigos-trilha.jpg','/assets/floripa/ilha-do-frances.jpg'][index]}')`}}><div className="difference-card__shade"/><div className="difference-card__content"><AudienceIcon index={index}/><span>0{index+1}</span><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
+      <section className="reasons section"><div className="wrap"><SectionHeading eyebrow="Do seu jeito" title="Há muitas formas de viver uma nova conexão."/><div className="difference-list">{audiences.slice(0,4).map(([title,text], index) => <article className="difference-card" key={title} style={{backgroundImage:`url('${['/assets/experiencias/familia-caiaque.jpg','/assets/experiencias/familia-natureza.jpg','/assets/experiencias/amigos-trilha.jpg','/assets/floripa/ilha-do-frances.jpg'][index]}')`}}><div className="difference-card__shade"/><div className="difference-card__content"><span>0{index+1}</span><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
 
       <section className="testimonials section section--dark" id="avaliacoes"><div className="wrap"><SectionHeading eyebrow="Quem já viveu" title="Experiências contadas por quem esteve aqui." copy="Avaliações reais de pessoas que escolheram viver Florianópolis com a Conexão EXO." light align="center"/><div className="testimonial-grid">{reviews.slice(0,3).map(item => <TestimonialCard item={{quote:item.text,author:item.author,role:'Avaliação no Google'}} key={item.author}/>)}</div></div></section>
 
@@ -81,7 +81,6 @@ function App() {
 
 function Footer(){return <footer className="footer"><div className="wrap footer__grid"><div><a className="footer-brand" href="#inicio">CONEXÃO <b>EXO</b><span>∞</span></a><p>Turismo de natureza em Florianópolis.<br/>Vivências na água, a bordo, no ar e na terra.</p></div><div><h3>Contato</h3><a href="tel:+5548984142078">(48) 98414-2078</a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp: (48) 99110-9531</a><a href="https://instagram.com/conexaoexo" target="_blank" rel="noreferrer">@conexaoexo</a></div><div><h3>Onde estamos</h3><p>Alameda César Nascimento, 646, Sala 6<br/>Jurerê — Florianópolis — SC<br/>CEP 88053-500</p></div></div><div className="wrap footer__bottom"><span>© Conexão EXO. Todos os direitos reservados.</span><span>CNPJ 42.766.551/0001-00</span></div></footer>}
 
-function AudienceIcon({ index }) { const icons = [Compass, Users, Users, MapPin]; const Icon = icons[index]; return <span className="difference-card__icon"><Icon size={21}/></span> }
 function StepIcon({ index }) { const icons = [Compass, MessageCircle, Check, CalendarCheck]; const Icon = icons[index]; return <span className="step-icon"><Icon size={18}/></span> }
 
 export default App
