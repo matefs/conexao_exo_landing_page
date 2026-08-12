@@ -9,8 +9,8 @@ export function ImageCard({ item, index, compact = false }) {
 
 export function TestimonialCard({ item }) {
   return <article className="testimonial-card">
-    <div className="stars">★★★★★</div>
+    <div className="testimonial-mark">“</div>
     <blockquote>“{item.quote}”</blockquote>
-    <footer><img src={item.avatar} alt="" /><div><strong>{item.author}</strong><span>Cliente OutBox</span></div></footer>
+    <footer><span className="testimonial-initials">{item.author.split(' ').map(word => word[0]).slice(0, 2).join('')}</span><div><strong>{item.author}</strong><span>{item.role}</span></div></footer>
   </article>
 }

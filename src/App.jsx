@@ -5,7 +5,7 @@ import { cssVariables } from './theme'
 import { Header } from './components/Header'
 import { ArrowLink, Button, Eyebrow, SectionHeading } from './components/UI'
 import { ImageCard, TestimonialCard } from './components/Cards'
-import { clients, experiences, methodology, reasons, solutions, testimonials } from './data/content'
+import { clients, experiences, googleReviews, impactNumbers, methodology, methodQuestions, reasons, solutions, testimonials } from './data/content'
 
 function App() {
   useEffect(() => {
@@ -28,7 +28,7 @@ function App() {
       '.problem .split > *', '.client-row img', '.method-grid article',
       '.card-grid .image-card', '.experience-grid .image-card',
       '.journey__content > *', '.difference-card',
-      '.testimonial-card', '.beyond .split > *', '.nationwide .split > *',
+      '.testimonial-card', '.beyond .split > *', '.google-review', '.nationwide .split > *',
       '.contact__grid > *', '.footer__grid > *',
     ]
     const elements = [...document.querySelectorAll(selectors.join(','))]
@@ -70,16 +70,18 @@ function App() {
           <Eyebrow dark>Treinamentos corporativos de alto impacto</Eyebrow>
           <h1>Experiências desenhadas para <em>transformar seu time</em></h1>
           <p>Jornadas de aprendizagem feitas para a realidade da sua empresa.</p>
-          <Button>Conheça a OutBox</Button>
+          <div className="hero__actions"><Button>Quero transformar meu time</Button><Button href="#solucoes" variant="outline">Conhecer nossos programas</Button></div>
         </div>
         <div className="hero__stamp" aria-hidden="true"><span>OUTSIDE<br/>THE BOX</span><b>↘</b></div>
         <div className="scroll-hint"><Mouse size={18}/><span>Role para explorar</span></div>
       </section>
 
+      <section className="impact-strip" aria-label="Números que comprovam nosso impacto"><div className="wrap"><p>Números que comprovam nosso impacto</p><div className="impact-grid">{impactNumbers.map(item => <div key={item.label}><strong>{item.value}</strong><span>{item.label}</span></div>)}</div></div></section>
+
       <section className="manifesto section" id="sobre">
         <div className="wrap manifesto__grid">
           <div><Eyebrow>A OutBox</Eyebrow><h2>Acreditamos que a transformação acontece quando as pessoas vivem aquilo que precisam aprender.</h2></div>
-          <div className="prose"><p>A OutBox nasceu da convicção de que desenvolver pessoas vai muito além de transmitir conhecimento. Mudanças reais acontecem quando criamos experiências capazes de despertar consciência, fortalecer relações e transformar a forma como as pessoas se conectam consigo mesmas, com os outros e com o trabalho.</p><p>Por isso, não desenhamos apenas treinamentos. Desenhamos experiências que tornam a aprendizagem natural, significativa e memorável.</p><p>Independentemente do formato — ao ar livre, em uma sala ou em um ambiente digital — buscamos criar contextos onde as pessoas possam sair do piloto automático, participar por inteiro e construir conhecimento juntas.</p><strong>É nesse espaço que a transformação acontece.</strong></div>
+          <div className="prose"><p>A OutBox nasceu da convicção de que desenvolver pessoas vai muito além de transmitir conhecimento. Mudanças reais acontecem quando criamos experiências capazes de despertar consciência, fortalecer relações e transformar a forma como as pessoas se conectam consigo mesmas, com os outros e com o trabalho.</p><p>Por isso, não desenhamos apenas treinamentos. Desenhamos experiências que tornam a aprendizagem natural, significativa e memorável.</p><p>Independentemente do formato — ao ar livre, em uma sala ou em um ambiente digital — buscamos criar contextos onde as pessoas possam sair do piloto automático, participar por inteiro e construir conhecimento juntas.</p><strong>É nesse espaço que a transformação acontece.</strong><br/><ArrowLink href="#form">Fale com um especialista</ArrowLink></div>
         </div>
       </section>
 
@@ -92,14 +94,17 @@ function App() {
       </section>
 
       <section className="method section section--dark" id="metodologia">
-        <div className="wrap"><SectionHeading eyebrow="Nossa forma de fazer" title="Metodologia 4D OutBox" copy="Toda experiência da OutBox é desenhada para responder às grandes questões do desenvolvimento humano nas organizações. Combinamos quatro dimensões que atuam de forma integrada para transformar experiências em mudanças reais." light/>
+        <div className="wrap"><SectionHeading eyebrow="Nossa metodologia" title="Metodologia 4D OutBox" copy="Toda experiência da OutBox é desenhada para responder às grandes questões do desenvolvimento humano nas organizações." light/>
+        <div className="method-questions">{methodQuestions.map((question, index) => <article key={question}><span>0{index + 1}</span><p>{question}</p></article>)}</div>
+        <p className="method-intro">Foi para responder a essas perguntas que desenvolvemos a Metodologia 4D OutBox. Em vez de uma única abordagem, combinamos quatro dimensões que atuam de forma integrada para transformar experiências em mudanças reais.</p>
+        <h3 className="method-subtitle">As quatro dimensões</h3>
         <div className="method-grid">{methodology.map(item => <article key={item.number}><div className="method-icon"><MethodIcon name={item.icon}/><span>{item.number}</span></div><h3>{item.title}</h3><strong>{item.lead}</strong><p>{item.text}</p></article>)}</div>
         <p className="method__closing">Quando essas quatro dimensões trabalham juntas, a aprendizagem deixa de ser algo que as pessoas recebem e passa a ser algo que elas vivem.</p></div>
       </section>
 
       <section className="section" id="solucoes"><div className="wrap"><SectionHeading eyebrow="O que fazemos" title="Soluções para desenvolver pessoas e fortalecer organizações"/><div className="card-grid">{solutions.map((item, i) => <ImageCard item={item} index={i} key={item.title}/>)}</div></div></section>
 
-      <section className="experiences section section--soft" id="experiencias"><div className="wrap"><SectionHeading eyebrow="Experiências OutBox" title="Experiências desenvolvidas para diferentes desafios" copy="Conheça alguns dos programas que ajudam empresas a desenvolver equipes de forma prática, dinâmica e memorável."/><div className="experience-grid">{experiences.map((item, i) => <ImageCard compact item={item} index={i} key={item.title}/>)}</div></div></section>
+      <section className="experiences section section--soft" id="experiencias"><div className="wrap"><SectionHeading eyebrow="Programas em destaque" title="Experiências desenvolvidas para diferentes desafios" copy="Conheça alguns dos programas que ajudam empresas a desenvolver equipes de forma prática, dinâmica e memorável."/><div className="experience-grid">{experiences.map((item, i) => <ImageCard compact item={item} index={i} key={item.title}/>)}</div><div className="section-cta"><ArrowLink href="#form">Ver mais programas</ArrowLink></div></div></section>
 
       <section className="journey section"><div className="journey__image"/><div className="wrap journey__content"><Eyebrow dark>Do desafio à mudança</Eyebrow><h2>Transformamos desafios em jornadas de aprendizagem</h2><p>Cada jornada nasce dos desafios reais da sua organização e é desenhada para unir aprendizagem, emoção e prática, promovendo mudanças reais no comportamento das equipes.</p><p>Porque desenvolver pessoas vai muito além de transmitir conhecimento.</p><Button>Construa sua jornada</Button></div></section>
 
@@ -107,9 +112,11 @@ function App() {
 
       <section className="testimonials section section--dark" id="depoimentos"><div className="wrap"><SectionHeading eyebrow="Histórias reais" title="O que nossos clientes dizem" copy="Os melhores resultados são aqueles percebidos por quem vive a experiência." light align="center"/><div className="testimonial-grid">{testimonials.map(item => <TestimonialCard item={item} key={item.author}/>)}</div></div></section>
 
-      <section className="beyond section"><div className="wrap split"><div><Eyebrow>Muito além</Eyebrow><h2>Muito além de um treinamento.</h2></div><div className="prose"><p>Desenhamos experiências de aprendizagem que conectam pessoas, desenvolvem comportamentos e fortalecem culturas organizacionais.</p><p>Cada jornada combina aprendizagem ativa, desafios reais e reflexão estruturada para gerar aplicação prática e resultados duradouros.</p><div className="benefit-chips">{['Aprendizagem ativa','Desenvolvimento comportamental','Aplicação prática','Resultados mensuráveis'].map(item => <span key={item}><Check size={14}/>{item}</span>)}</div><ArrowLink href="#form">Descubra uma nova forma de desenvolver pessoas</ArrowLink></div></div></section>
+      <section className="beyond section"><div className="wrap"><div className="split"><div><Eyebrow>OutBox rompe padrões</Eyebrow><h2>Muito além de um treinamento.</h2></div><div className="prose"><p>Desenhamos experiências de aprendizagem que conectam pessoas, desenvolvem comportamentos e fortalecem culturas organizacionais.</p><p>Cada jornada combina aprendizagem ativa, desafios reais e reflexão estruturada para gerar aplicação prática e resultados duradouros.</p><div className="benefit-chips">{['Experiências com propósito','Aprendizagem ativa','Desenvolvimento comportamental','Aplicação prática','Resultados mensuráveis'].map(item => <span key={item}><Check size={14}/>{item}</span>)}</div><ArrowLink href="#form">Fale com um especialista</ArrowLink></div></div><div className="beyond-stats"><div><strong>NPS +90</strong><span>Satisfação dos clientes</span></div><div><strong>+18</strong><span>anos de atuação</span></div><div><strong>+40.000</strong><span>participantes</span></div></div></div></section>
 
       <section className="nationwide section"><div className="wrap split"><div><Eyebrow>Em todo o Brasil</Eyebrow><h2>Levamos experiências transformadoras para qualquer lugar.</h2><p>Atendemos empresas de todos os portes em todo o território nacional, adaptando cada projeto à realidade da organização e ao contexto de cada equipe.</p><p>Onde houver pessoas dispostas a evoluir, estaremos prontos para criar experiências que geram resultados.</p><Button>Fale com um especialista</Button></div><div className="nationwide__visual"><img src="/assets/brasil.webp" alt="Atuação da OutBox em todo o Brasil"/><span><MapPin size={18}/> Todo o território nacional</span></div></div></section>
+
+      <section className="google-reviews section"><div className="wrap"><SectionHeading eyebrow="Avaliações no Google" title="O que dizem sobre a OutBox" copy="Experiências reais compartilhadas por quem já viveu uma jornada OutBox."/><div className="google-reviews__grid">{googleReviews.map(review => <article className="google-review" key={review.author}><header><img src={review.avatar} alt=""/><div><strong>{review.author}</strong><span>{review.time}</span></div><b aria-label="Avaliação de cinco estrelas">★★★★★</b></header><p>{review.text}</p></article>)}</div></div></section>
 
       <section className="contact section" id="form"><div className="wrap contact__grid"><div><Eyebrow>Vamos conversar</Eyebrow><h2>Vamos transformar<br/><em>seu time?</em></h2><p>Conte para nossa equipe quais são os desafios da sua empresa. Juntos, construiremos uma experiência personalizada para desenvolver pessoas, fortalecer equipes e impulsionar resultados.</p></div><ContactForm/></div></section>
     </main>

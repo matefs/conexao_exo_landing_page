@@ -132,3 +132,44 @@ html{scroll-behavior:auto;scroll-padding-top:88px}body{overflow-x:hidden}section
   .menu{display:grid;place-items:center;margin-left:auto;width:44px;height:44px;border:1px solid rgba(255,255,255,.2);border-radius:50%}
   .menu svg{width:22px;height:22px}
 }
+
+/* Content-complete sections */
+.button--outline{border:1px solid rgba(255,255,255,.55);background:rgba(0,0,0,.18);color:#fff;backdrop-filter:blur(8px)}
+.button--outline:hover{border-color:var(--lime);color:var(--lime)}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px}
+.impact-strip{padding:40px 0;background:var(--ink);color:#fff}
+.impact-strip>.wrap>p{margin:0 0 24px;color:#929292;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.impact-grid>div{padding:25px 24px 4px 0;border-right:1px solid var(--line)}
+.impact-grid>div:not(:first-child){padding-left:28px}.impact-grid>div:last-child{border:0}
+.impact-grid strong,.impact-grid span{display:block}.impact-grid strong{color:var(--lime);font-size:clamp(35px,4vw,57px);line-height:1}.impact-grid span{margin-top:10px;color:#aaa;font-size:12px}
+.manifesto .prose .arrow-link{margin-top:28px}
+.method-questions{display:grid;grid-template-columns:repeat(4,1fr);margin:-12px 0 42px;border-block:1px solid var(--line)}
+.method-questions article{padding:26px;border-right:1px solid var(--line)}.method-questions article:last-child{border:0}
+.method-questions span{color:var(--lime);font-size:11px}.method-questions p{margin:14px 0 0;color:#eee;font-size:17px;line-height:1.35}
+.method-intro{max-width:800px;margin:0 0 48px;color:#aaa;font-size:17px}.method-subtitle{margin:0 0 20px;color:#fff;font-size:28px}
+.testimonial-mark{height:48px;color:var(--lime);font-family:Georgia,serif;font-size:72px;line-height:1}
+.testimonial-initials{flex:0 0 44px;width:44px;height:44px;display:grid!important;place-items:center;border-radius:50%;background:var(--lime);color:var(--ink)!important;font-size:12px!important;font-weight:800}
+.testimonial-card footer div span{max-width:210px;line-height:1.4}.section-cta{display:flex;justify-content:center;margin-top:44px}
+.beyond-stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:65px;border-block:1px solid rgba(0,0,0,.15)}
+.beyond-stats>div{padding:30px;border-right:1px solid rgba(0,0,0,.15)}.beyond-stats>div:first-child{padding-left:0}.beyond-stats>div:last-child{border:0}
+.beyond-stats strong,.beyond-stats span{display:block}.beyond-stats strong{font-size:clamp(30px,4vw,52px);line-height:1}.beyond-stats span{margin-top:9px;color:#626262;font-size:12px}
+.google-reviews{background:var(--paper-soft)}.google-reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.google-review{padding:28px;border:1px solid #deded8;border-radius:var(--radius-md);background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.04)}
+.google-review header{display:grid;grid-template-columns:46px 1fr auto;gap:12px;align-items:center}.google-review img{width:46px;height:46px;border-radius:50%;object-fit:cover}.google-review header div{display:flex;flex-direction:column}.google-review header strong{font-size:13px}.google-review header span{color:#888;font-size:11px}.google-review header b{color:#f4b400;font-size:11px;letter-spacing:.05em}.google-review p{margin:20px 0 0;color:#555;font-size:13px;line-height:1.75}
+
+@media(max-width:900px){
+  .impact-grid,.method-questions{grid-template-columns:repeat(2,1fr)}
+  .impact-grid>div:nth-child(2),.method-questions article:nth-child(2){border-right:0}
+  .impact-grid>div:nth-child(-n+2),.method-questions article:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .google-reviews__grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:720px){
+  .impact-grid>div{padding:22px 12px!important}.method-questions{grid-template-columns:1fr}
+  .method-questions article{border-right:0;border-bottom:1px solid var(--line)!important}.google-reviews__grid{grid-template-columns:1fr}
+  .beyond-stats{grid-template-columns:1fr}.beyond-stats>div,.beyond-stats>div:first-child{padding:23px 0;border-right:0;border-bottom:1px solid rgba(0,0,0,.15)}.beyond-stats>div:last-child{border-bottom:0}
+}
+@media(max-width:420px){
+  .hero__actions{display:grid}.hero__actions .button{width:100%}.impact-grid{grid-template-columns:1fr}
+  .impact-grid>div{border-right:0!important;border-bottom:1px solid var(--line)!important}.impact-grid>div:last-child{border-bottom:0!important}
+}
