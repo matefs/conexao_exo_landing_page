@@ -1,5 +1,10 @@
 # Créditos das imagens de experiências
 
+## stand-up-paddle.jpg
+- Fonte: Unsplash — “A person on a paddle board in the water”
+- Autor: Jordan Steranka
+- Licença: Unsplash License
+
 ## familia-caiaque.jpg
 - Fonte: Wikimedia Commons — “Kayaking at Brisbane River”
 - Autor: Brisbane City Council

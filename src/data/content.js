@@ -18,7 +18,7 @@ export const categories = [
 ]
 
 export const experiences = [
-  { title: 'Stand up paddle em Jurerê', text: 'Entre no mar, movimente o corpo e contemple Jurerê com calma.', image: '/assets/floripa/jurere.jpg', message: 'stand up paddle em Jurerê', icon: 'waves' },
+  { title: 'Stand up paddle em Jurerê', text: 'Entre no mar, movimente o corpo e contemple Jurerê com calma.', image: '/assets/experiencias/stand-up-paddle.jpg', message: 'stand up paddle em Jurerê', icon: 'waves' },
   { title: 'Caiaque', text: 'Reme em águas tranquilas e aproveite a paisagem no seu ritmo.', image: '/assets/experiencias/familia-caiaque.jpg', message: 'passeio de caiaque', icon: 'users' },
   { title: 'Expedição à Ilha do Francês', text: 'Explore o mar em uma vivência de stand up paddle marcante.', image: '/assets/floripa/ilha-do-frances.jpg', message: 'expedição à Ilha do Francês', icon: 'compass' },
   { title: 'Trilhas em Florianópolis', text: 'Conheça paisagens como Lagoinha do Leste, Costa da Lagoa e Gravatá.', image: '/assets/experiencias/amigos-trilha.jpg', message: 'trilhas em Florianópolis', icon: 'mountain' },

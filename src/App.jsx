@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
-import { CalendarCheck, Check, Compass, MapPin, MessageCircle, Mouse } from 'lucide-react'
+import { Check, MapPin, Mouse } from 'lucide-react'
 import { cssVariables } from './theme'
 import { Header } from './components/Header'
 import { ArrowLink, Button, Eyebrow, SectionHeading } from './components/UI'
@@ -67,20 +67,18 @@ function App() {
 
       <section className="testimonials section section--dark" id="avaliacoes"><div className="wrap"><SectionHeading eyebrow="Quem já viveu" title="Experiências contadas por quem esteve aqui." copy="Avaliações reais de pessoas que escolheram viver Florianópolis com a Conexão EXO." light align="center"/><div className="testimonial-grid">{reviews.slice(0,3).map(item => <TestimonialCard item={{quote:item.text,author:item.author,role:'Avaliação no Google'}} key={item.author}/>)}</div></div></section>
 
-      <section className="beyond section"><div className="wrap split"><div><Eyebrow>Da vontade à vivência</Eyebrow><h2>Sua próxima experiência começa com uma conversa.</h2></div><div className="prose steps-list">{steps.map(([number,title,text], index) => <article key={number}><StepIcon index={index}/><span>{number}</span><div><strong>{title}</strong><p>{text}</p></div></article>)}<ArrowLink href={whatsappUrl}>Consultar uma experiência</ArrowLink></div></div></section>
+      <section className="beyond section"><div className="wrap split"><div><Eyebrow>Da vontade à vivência</Eyebrow><h2>Sua próxima experiência começa com uma conversa.</h2></div><div className="prose steps-list">{steps.map(([number,title,text]) => <article key={number}><span>{number}</span><div><strong>{title}</strong><p>{text}</p></div></article>)}<ArrowLink href={whatsappUrl}>Consultar uma experiência</ArrowLink></div></div></section>
 
       <section className="nationwide section"><div className="wrap split"><div><Eyebrow>No coração de Jurerê</Eyebrow><h2>Sua conexão começa em Florianópolis.</h2><p>A Conexão EXO está perto do mar e de muitas paisagens que tornam o norte da ilha especial para viver ao ar livre.</p><address><MapPin size={20}/><span>Alameda César Nascimento, 646, Sala 6<br/>Jurerê — Florianópolis — SC<br/>CEP 88053-500</span></address><Button href={whatsappUrl}>Chamar no WhatsApp</Button></div><div className="nationwide__visual map-floripa"><img src="/assets/floripa/mapa-florianopolis.png" alt="Mapa de Santa Catarina com Florianópolis e Jurerê destacados"/></div></div></section>
 
       <section className="faq section section--dark"><div className="wrap faq-grid"><SectionHeading eyebrow="Antes de viver" title="Dúvidas frequentes." light/><div>{faqs.map(([question,answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></div></section>
 
-      <section className="contact section" id="contato"><div className="wrap contact__grid"><div><Eyebrow>Chega de “algum dia”</Eyebrow><h2>Quantos dias ainda vão morrer no <em>automático?</em></h2><p>Conte o que gostaria de viver, quando estará em Florianópolis e com quem quer compartilhar esse momento.</p></div><div className="contact-callout"><p>Se você fechar esta página e voltar para a mesma rotina, amanhã será fácil inventar outra desculpa.</p><h3>A próxima memória pode começar agora.</h3><Button href={whatsappUrl} variant="light">Não vou deixar para depois</Button><small>O primeiro passo leva menos tempo do que inventar mais uma desculpa.</small></div></div></section>
+      <section className="contact section" id="contato"><div className="wrap contact__grid"><div><Eyebrow>Chega de “algum dia”</Eyebrow><h2>Quantos dias ainda vão morrer no <em>automático?</em></h2><p>Conte o que gostaria de viver, quando estará em Florianópolis e com quem quer compartilhar esse momento.</p></div><div className="contact-callout"><p>Se você fechar esta página e voltar para a mesma rotina, amanhã será fácil inventar outra desculpa.</p><h3>A próxima memória pode começar agora.</h3><Button href={whatsappUrl} variant="dark">Não vou deixar para depois</Button><small>O primeiro passo leva menos tempo do que inventar mais uma desculpa.</small></div></div></section>
     </main>
     <Footer />
   </>
 }
 
 function Footer(){return <footer className="footer"><div className="wrap footer__grid"><div><a className="footer-brand" href="#inicio">CONEXÃO <b>EXO</b><span>∞</span></a><p>Turismo de natureza em Florianópolis.<br/>Vivências na água, a bordo, no ar e na terra.</p></div><div><h3>Contato</h3><a href="tel:+5548984142078">(48) 98414-2078</a><a href={whatsappUrl} target="_blank" rel="noreferrer">WhatsApp: (48) 99110-9531</a><a href="https://instagram.com/conexaoexo" target="_blank" rel="noreferrer">@conexaoexo</a></div><div><h3>Onde estamos</h3><p>Alameda César Nascimento, 646, Sala 6<br/>Jurerê — Florianópolis — SC<br/>CEP 88053-500</p></div></div><div className="wrap footer__bottom"><span>© Conexão EXO. Todos os direitos reservados.</span><span>CNPJ 42.766.551/0001-00</span></div></footer>}
-
-function StepIcon({ index }) { const icons = [Compass, MessageCircle, Check, CalendarCheck]; const Icon = icons[index]; return <span className="step-icon"><Icon size={18}/></span> }
 
 export default App
