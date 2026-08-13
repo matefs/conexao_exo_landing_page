@@ -11,9 +11,9 @@
 - Licença: CC BY 2.0
 
 ## familia-natureza.jpg
-- Fonte: Unsplash — “A family playing together outdoors in the sunshine.”
-- Autor: Hoi An and Da Nang Photographer (@hoianphotographer)
-- Licença: Unsplash License
+- Fonte: Pexels — “A happy family playing on the sandy beach near the ocean under clear blue sky”
+- Autor: Trần Long
+- Licença: Pexels License
 
 ## amigos-trilha.jpg
 - Fonte: Wikimedia Commons — “Hiking group”
