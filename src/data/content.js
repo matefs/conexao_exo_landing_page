@@ -12,7 +12,7 @@ export const navigation = [
 
 export const categories = [
   { title: 'Água', lead: 'Entre no ritmo do mar.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/experiencias/familia-caiaque.jpg', icon: 'waves' },
-  { title: 'A bordo', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship' },
+  { title: 'Navegação', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship' },
   { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/experiencias/voo-duplo-parapente.jpg', icon: 'wind' },
   { title: 'Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/experiencias/amigos-trilha.jpg', icon: 'mountain' },
 ]
@@ -36,9 +36,9 @@ export const audiences = [
 ]
 
 export const steps = [
-  ['01', 'Escolha o que quer viver', 'Explore água, bordo, ar e terra. Se estiver em dúvida, conte que tipo de dia você gostaria de ter.'],
+  ['01', 'Escolha o que quer viver', 'Explore experiências no mar, no ar e na terra. Se estiver em dúvida, conte que tipo de dia você gostaria de ter.'],
   ['02', 'Chame no WhatsApp', 'Informe a experiência, a data desejada, o número de pessoas e qualquer necessidade importante.'],
-  ['03', 'Confirme os detalhes', 'Receba disponibilidade, valor, ponto de encontro, duração e orientações da atividade.'],
+  ['03', 'Confirme os detalhes', 'Receba informações sobre disponibilidade, valor, ponto de encontro, duração e orientações da atividade.'],
   ['04', 'Viva a experiência', 'Chegue no horário combinado, siga as orientações e aproveite sua conexão com a natureza.'],
 ]
 
@@ -53,7 +53,7 @@ export const reviews = [
 
 export const faqs = [
   ['Nunca pratiquei a atividade. Posso participar?', 'Algumas vivências recebem iniciantes. Conte sua experiência, idade, necessidades e dúvidas antes de reservar para receber a orientação adequada.'],
-  ['Como faço uma reserva?', 'Chame no WhatsApp (48) 99110-9531, informe a vivência, a data e o número de pessoas. A reserva depende da confirmação de disponibilidade e das condições.'],
+  ['Como faço uma reserva?', 'Chame no WhatsApp +55 (48) 99110-9531, informe a vivência, a data e o número de pessoas. A reserva depende da confirmação de disponibilidade e das condições.'],
   ['O que está incluído?', 'Equipamentos, duração, acompanhamento, ponto de encontro e demais detalhes variam conforme a vivência e são confirmados no atendimento.'],
   ['As experiências dependem do clima?', 'Atividades ao ar livre podem depender do tempo e do ambiente. A equipe informará qualquer orientação ou alteração necessária.'],
   ['Crianças podem participar?', 'Depende da atividade, da idade e das condições específicas. Consulte a equipe antes de reservar.'],
