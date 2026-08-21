@@ -57,14 +57,12 @@ export default function SailboatPage() {
         <div className="wrap sail-offer__grid">
           <div className="sail-offer__visual"><span><ShipWheel size={22}/> Baía Norte</span></div>
           <div className="sail-offer__card">
-            <span className="sail-offer__deadline">Até o final de setembro</span>
-            <p>Passeio privativo</p>
-            <h2>6 horas</h2>
-            <div className="sail-offer__price"><small>R$</small><strong>1.500</strong><small>,00</small></div>
-            <p>por passeio · até 5 pessoas</p>
+            <span className="sail-offer__deadline">Passeio sob consulta</span>
+            <p>Uma experiência privativa</p>
+            <h2>Até 5 pessoas</h2>
             <ul><li><Check size={17}/> Veleiro confortável e seguro</li><li><Check size={17}/> Belezas da Baía Norte</li><li><Check size={17}/> Conforto e privacidade durante a navegação</li></ul>
             <Button href={bookingUrl}>Quero reservar</Button>
-            <small>Oferta sujeita à disponibilidade e às condições de navegação.</small>
+            <small>Passeio sujeito à disponibilidade e às condições de navegação.</small>
           </div>
         </div>
       </section>

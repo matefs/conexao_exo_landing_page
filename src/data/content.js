@@ -38,7 +38,7 @@ export const audiences = [
 export const steps = [
   ['01', 'Escolha o que quer viver', 'Explore experiências no mar, no ar e na terra. Se estiver em dúvida, conte que tipo de dia você gostaria de ter.'],
   ['02', 'Chame no WhatsApp', 'Informe a experiência, a data desejada, o número de pessoas e qualquer necessidade importante.'],
-  ['03', 'Confirme os detalhes', 'Receba informações sobre disponibilidade, valor, ponto de encontro, duração e orientações da atividade.'],
+  ['03', 'Confirme os detalhes', 'Receba informações sobre disponibilidade, ponto de encontro, duração e orientações da atividade.'],
   ['04', 'Viva a experiência', 'Chegue no horário combinado, siga as orientações e aproveite sua conexão com a natureza.'],
 ]
 
