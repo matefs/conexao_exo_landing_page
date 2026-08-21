@@ -5,10 +5,33 @@ const cardIcons = { compass: Compass, mountain: Mountain, ship: ShipWheel, users
 
 export function ImageCard({ item, index, compact = false }) {
   const Icon = cardIcons[item.icon]
-  return <article className={`image-card ${compact ? 'image-card--compact' : ''}`} style={{ backgroundImage: `linear-gradient(180deg, transparent 20%, rgba(0,0,0,.9) 100%), url("${item.image}")` }}>
-    <div className="image-card__top">{Icon && <span className="image-card__icon"><Icon size={20}/></span>}<span className="image-card__number">0{index + 1}</span></div>
-    <div><h3>{item.title}</h3><p>{item.lead || item.text}</p>{item.lead && <p>{item.text}</p>}<ArrowLink href={item.href}>Saiba mais</ArrowLink></div>
-  </article>
+  const CardTag = item.href ? 'a' : 'article'
+  const isExternal = item.href?.startsWith('http')
+  const ctaLabel = item.ctaText || (item.href === '/vivencias' ? 'Ver vivências' : item.href === '/passeio-de-veleiro' ? 'Conhecer passeio' : item.href?.includes('wa.me') ? 'Consultar vivência' : 'Saiba mais')
+
+  return (
+    <CardTag
+      href={item.href}
+      target={isExternal ? '_blank' : undefined}
+      rel={isExternal ? 'noreferrer' : undefined}
+      className={`image-card ${compact ? 'image-card--compact' : ''}`}
+      style={{ backgroundImage: `linear-gradient(180deg, transparent 20%, rgba(0,0,0,.9) 100%), url("${item.image}")` }}
+    >
+      <div className="image-card__top">
+        {Icon && <span className="image-card__icon"><Icon size={20}/></span>}
+        <span className="image-card__number">0{index + 1}</span>
+      </div>
+      <div>
+        <h3>{item.title}</h3>
+        {item.lead && <p style={{ color: 'var(--lime)', fontWeight: 500 }}>{item.lead}</p>}
+        <p>{item.text}</p>
+        <span className="arrow-link">
+          {ctaLabel}
+          <span>→</span>
+        </span>
+      </div>
+    </CardTag>
+  )
 }
 
 export function TestimonialCard({ item }) {
