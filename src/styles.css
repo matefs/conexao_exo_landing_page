@@ -45,7 +45,7 @@
 @media(max-width:600px){.scroll-hint{display:none}.nationwide__visual span{left:5%;bottom:4%}}
 
 /* Responsive refinement */
-html{scroll-behavior:auto;scroll-padding-top:94px}body{overflow-x:hidden}
+html{scroll-behavior:auto;scroll-padding-top:78px}body{overflow-x:hidden}
 @media(max-width:1100px){
   .site-header{padding-inline:24px}.nav{gap:18px;font-size:10px}.brand img{width:165px}.header-cta .button{padding:12px 15px;font-size:10px}
   .hero h1{max-width:850px;font-size:clamp(46px,5.8vw,62px)}
@@ -56,7 +56,7 @@ html{scroll-behavior:auto;scroll-padding-top:94px}body{overflow-x:hidden}
 }
 @media(max-width:900px){
   :root{--section-space:clamp(64px,10vw,90px)}
-  html{scroll-padding-top:92px}
+  html{scroll-padding-top:76px}
   .site-header,.site-header--scrolled{height:76px}.site-header--scrolled .brand img{width:150px}.nav,.site-header--scrolled .nav{position:fixed;top:76px;max-height:calc(100svh - 76px);overflow:auto}
   .hero{min-height:780px}.hero__content{padding-top:90px}.hero h1{font-size:clamp(44px,7.5vw,64px);max-width:760px}.hero__stamp{width:100px;height:100px}
   .manifesto__grid,.split,.contact__grid{gap:45px}.problem .split{grid-template-columns:1fr 1fr}.problem__image{height:560px}
