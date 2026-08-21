@@ -12,9 +12,9 @@ export const navigation = [
 
 export const categories = [
   { title: 'Água', lead: 'Entre no ritmo do mar.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/experiencias/familia-caiaque.jpg', icon: 'waves' },
-  { title: 'Navegação', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship' },
-  { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/experiencias/voo-duplo-parapente.jpg', icon: 'wind' },
   { title: 'Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/experiencias/amigos-trilha.jpg', icon: 'mountain' },
+  { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/experiencias/voo-duplo-parapente.jpg', icon: 'wind' },
+  { title: 'Navegação', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship', href: '/passeio-de-veleiro' },
 ]
 
 export const experiences = [

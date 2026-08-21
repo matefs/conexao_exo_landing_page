@@ -12,7 +12,7 @@ const experienceLink = name => `https://wa.me/5548991109531?text=${encodeURIComp
 function App() {
   useEffect(() => {
     Object.entries(cssVariables).forEach(([key, value]) => document.documentElement.style.setProperty(key, value))
-    const lenis = new Lenis({ autoRaf: true, lerp: 0.075, smoothWheel: true, wheelMultiplier: 0.85, anchors: { offset: -78, duration: 1.2 } })
+    const lenis = new Lenis({ autoRaf: true, lerp: 0.075, smoothWheel: true, wheelMultiplier: 0.85, anchors: { duration: 1.2 } })
     return () => lenis.destroy()
   }, [])
 
@@ -61,7 +61,7 @@ function App() {
 
       <section className="experiences section section--soft"><div className="wrap"><SectionHeading eyebrow="Por onde começar" title="Experiências para viver Floripa de verdade." copy="Algumas possibilidades para transformar um dia comum em uma nova memória."/><div className="experience-grid">{experiences.slice(0,5).map((item, index) => <ImageCard compact item={{...item, href: experienceLink(item.message)}} index={index} key={item.title}/>)}</div><div className="section-cta"><ArrowLink href={whatsappUrl}>Consultar todas as vivências</ArrowLink></div></div></section>
 
-      <section className="journey section" id="veleiro"><div className="journey__image"/><div className="wrap journey__content"><Eyebrow dark>Veleiro Crevette</Eyebrow><h2>O tempo muda quando você navega.</h2><p>Até cinco pessoas navegando pela Baía Norte de Florianópolis, com privacidade e roteiro combinado.</p><div className="benefit-chips sailing-chips">{['Até 5 pessoas','Baía Norte','Rota de 4 horas','Rota de 8 horas','Roteiro personalizado'].map(item => <span key={item}><Check size={14}/>{item}</span>)}</div><div className="sailing-prices"><div><small>4 horas</small><strong>R$ 1.500</strong></div><div><small>8 horas</small><strong>R$ 2.500</strong></div><div><small>Personalizado</small><strong>Sob consulta</strong></div></div><p className="price-note">Valores, embarque, rota e disponibilidade sujeitos à confirmação.</p><Button href="/passeio-de-veleiro">Conhecer o passeio</Button></div></section>
+      <section className="journey section" id="veleiro"><div className="journey__image"/><div className="wrap journey__content"><Eyebrow dark>Veleiro Crevette</Eyebrow><h2>O tempo muda quando você navega.</h2><p>Até cinco pessoas navegando pela Baía Norte de Florianópolis, com privacidade e roteiro combinado.</p><div className="benefit-chips sailing-chips">{['Até 5 pessoas','Baía Norte','Rota de 4 horas','Rota de 8 horas','Roteiro personalizado'].map(item => <span key={item}><Check size={14}/>{item}</span>)}</div><Button href="/passeio-de-veleiro">Conhecer o passeio</Button></div></section>
 
       <section className="reasons section"><div className="wrap"><SectionHeading eyebrow="Do seu jeito" title="Há muitas formas de viver uma nova conexão."/><div className="difference-list">{audiences.slice(0,4).map(([title,text], index) => <article className={`difference-card ${index === 1 ? 'difference-card--family' : ''}`} key={title} style={{backgroundImage:`url('${['/assets/experiencias/familia-caiaque.jpg','/assets/experiencias/familia-natureza.jpg','/assets/experiencias/amigos-trilha.jpg','/assets/floripa/ilha-do-frances.jpg'][index]}')`}}><div className="difference-card__shade"/><div className="difference-card__content"><span>0{index+1}</span><h3>{title}</h3><p>{text}</p></div></article>)}</div></div></section>
 
