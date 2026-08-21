@@ -13,7 +13,11 @@ function App() {
   useEffect(() => {
     Object.entries(cssVariables).forEach(([key, value]) => document.documentElement.style.setProperty(key, value))
     const lenis = new Lenis({ autoRaf: true, lerp: 0.075, smoothWheel: true, wheelMultiplier: 0.85, anchors: { duration: 1.2 } })
-    return () => lenis.destroy()
+    window.lenis = lenis
+    return () => {
+      lenis.destroy()
+      delete window.lenis
+    }
   }, [])
 
   useEffect(() => {
