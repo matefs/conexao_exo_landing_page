@@ -1,5 +1,5 @@
 export const whatsappNumber = '5548991109531'
-export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Encontrei a Conexão EXO pelo site e quero conhecer as experiências disponíveis. Podem me ajudar?')}`
+export const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá! Vim pelo site da Conexão EXO e quero conhecer as experiências disponíveis. Podem me ajudar?')}`
 
 export const navigation = [
   { label: 'Início', href: '#inicio' },
@@ -11,10 +11,10 @@ export const navigation = [
 ]
 
 export const categories = [
-  { title: 'Água', lead: 'Entre no ritmo do mar.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/experiencias/familia-caiaque.jpg', icon: 'waves', href: '/vivencias' },
-  { title: 'Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/experiencias/amigos-trilha.jpg', icon: 'mountain', href: '/vivencias' },
-  { title: 'Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/experiencias/voo-duplo-parapente.jpg', icon: 'wind', href: '/vivencias' },
-  { title: 'Navegação', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship', href: '/vivencias' },
+  { title: 'No Ar', lead: 'Descubra a liberdade lá de cima.', text: 'Voo duplo de parapente e salto duplo de paraquedismo para viver Florianópolis por uma perspectiva inesquecível.', image: '/assets/experiencias/voo-duplo-parapente.jpg', icon: 'wind', href: '/vivencias' },
+  { title: 'No Mar', lead: 'Entre no ritmo das águas.', text: 'Stand up paddle, expedição à Ilha do Francês, caiaque, rafting, mergulho e experiências de rapel em cachoeiras.', image: '/assets/experiencias/familia-caiaque.jpg', icon: 'waves', href: '/vivencias' },
+  { title: 'Na Terra', lead: 'Caminhe por lugares que ficam na memória.', text: 'Trilhas, arvorismo e outras atividades para se movimentar, respirar e conhecer a natureza de perto.', image: '/assets/experiencias/amigos-trilha.jpg', icon: 'mountain', href: '/vivencias' },
+  { title: 'A bordo', lead: 'Veja Floripa de outro ponto de vista.', text: 'Passeios de veleiro e lancha para contemplar paisagens, celebrar encontros e aproveitar o tempo com privacidade.', image: '/assets/experiencias/grupo-veleiro.jpg', icon: 'ship', href: '/vivencias' },
 ]
 
 export const experiences = [

@@ -1,16 +1,17 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
-import { ArrowUpRight, Mountain, ShipWheel, Waves, Wind } from 'lucide-react'
+import { ArrowUpRight, Compass, Mountain, ShipWheel, Waves, Wind } from 'lucide-react'
 import { Button, Eyebrow } from './components/UI'
 import { cssVariables } from './theme'
 
-const whatsapp = activity => `https://wa.me/5548991109531?text=${encodeURIComponent(`Olá! Encontrei a Conexão EXO pelo site e quero saber mais sobre ${activity}.`)}`
+const whatsapp = activity => `https://wa.me/5548991109531?text=${encodeURIComponent(`Olá! Vim pelo site da Conexão EXO e quero saber mais sobre ${activity}.`)}`
 
 const groups = [
-  { title: 'Água', icon: Waves, copy: 'Experiências para remar, explorar o mar e conhecer cachoeiras da região.', image: '/assets/experiencias/familia-caiaque.jpg', activities: ['Stand up paddle em Jurerê', 'Expedição de stand up paddle à Ilha do Francês', 'Caiaque', 'Rafting', 'Mergulho', 'Rapel na Cachoeira da Ressurreição', 'Rapel na Cachoeira Rio do Salto'] },
-  { title: 'Terra', icon: Mountain, copy: 'Caminhos para se movimentar, respirar e descobrir a natureza de perto.', image: '/assets/experiencias/amigos-trilha.jpg', activities: ['Trilha do Forte até a Praia da Daniela', 'Trilha da Praia do Gravatá', 'Trilha da Lagoinha do Leste', 'Trilha do Cambirela', 'Trilha da Costa da Lagoa', 'Arvorismo', 'Arvorismo kids'] },
-  { title: 'Ar', icon: Wind, copy: 'Florianópolis vista do alto em experiências acompanhadas por profissionais.', image: '/assets/experiencias/voo-duplo-parapente.jpg', activities: ['Voo duplo de parapente', 'Salto duplo de paraquedismo'] },
-  { title: 'Navegação', icon: ShipWheel, copy: 'Uma alternativa para aproveitar o litoral com conforto e outro ponto de vista.', image: '/assets/floripa/ilha-do-frances.jpg', activities: ['Passeio de lancha'] },
+  { title: 'Água', icon: Waves, copy: 'Experiências para aproveitar o mar, os rios e as cachoeiras da região.', image: '/assets/experiencias/familia-caiaque.jpg', activities: ['ALUGUEL JET SKI', 'BANANA BOAT', 'CAIAQUE', 'KITE SURF', 'MERGULHO', 'RAFTING', 'RAFTING KIDS', 'RAPEL DE CACHOEIRA', 'STAND UP', 'SURF'] },
+  { title: 'Terra', icon: Mountain, copy: 'Parques, trilhas e atividades para descobrir novos lugares e paisagens.', image: '/assets/experiencias/amigos-trilha.jpg', activities: ['ALLES PARK POMERODE', 'ARVORISMO', 'ARVORISMO KIDS', 'DUNAS JOAQUINA (EXPERIÊNCIA)', 'PASSAPORTE BETO CARRERO', 'RODA GIGANTE BALNEÁRIO CAMBORIÚ', 'TRILHA DA COSTA DA LAGOA', 'TRILHA DA LAGOINHA DO LESTE', 'TRILHA DA PRAIA DO GRAVATÁ', 'TRILHA DO CAMBIRELA', 'TRILHA DO FORTE ATÉ A PRAIA DA DANIELA', 'ZOOLÓGICO POMERODE'] },
+  { title: 'Ar', icon: Wind, copy: 'Experiências para observar a região do alto e viver novas emoções.', image: '/assets/experiencias/voo-duplo-parapente.jpg', activities: ['HELICÓPTERO', 'PARAQUEDAS', 'PARAPENTE'] },
+  { title: 'Navegação', icon: ShipWheel, copy: 'Opções para aproveitar o litoral a bordo e contemplar novas paisagens.', image: '/assets/floripa/ilha-do-frances.jpg', activities: ['ALUGUEL LANCHA', 'BARCO PIRATA', 'KATTAMARAM FLORIANÓPOLIS', 'VELEIRO'] },
+  { title: 'Passeios e Traslados', icon: Compass, copy: 'Soluções para conhecer os destinos da região com mais praticidade.', image: '/assets/floripa/santo-antonio-de-lisboa.jpg', activities: ['ALUGUEL DE CARROS/BIKE', 'CITY TOUR PELA CIDADE DE FLORIANÓPOLIS', 'TRASLADO AEROPORTO', 'TRASLADO BALNEÁRIO CAMBORIÚ + PARQUE UNIPRAIA', 'TRASLADO BETO CARRERO'] },
 ]
 
 export default function ExperiencesPage() {
@@ -24,7 +25,7 @@ export default function ExperiencesPage() {
   return <div className="all-experiences-page">
     <header className="sail-header">
       <div className="wrap sail-header__inner">
-        <a className="footer-brand" href="/" aria-label="Conexão EXO — página inicial">CONEXÃO <b>EXO</b><span>∞</span></a>
+        <a className="footer-brand" href="/" aria-label="Conexão EXO — página inicial"><img className="exo-logo" src="/assets/logo-exo-horiz.png" alt="Conexão EXO" /></a>
         <a className="sail-header__back" href="/">Voltar ao site</a>
         <Button href={whatsapp('as vivências disponíveis')}>Consultar</Button>
       </div>
@@ -37,12 +38,12 @@ export default function ExperiencesPage() {
         <div className="wrap experiences-hero__content">
           <Eyebrow dark>Conexão EXO · Florianópolis</Eyebrow>
           <h1>Escolha como você quer viver a <em>natureza.</em></h1>
-          <p>Água, terra, ar e navegação: encontre uma experiência para sair do automático e conhecer a Ilha da Magia de verdade.</p>
+          <p>No ar, no mar, na terra e à bordo: encontre uma experiência para sair do automático e conhecer a Ilha da Magia de verdade.</p>
           <a className="sail-text-link" href="#atividades">Ver todas as atividades</a>
         </div>
       </section>
 
-      <section className="experiences-catalog section" id="atividades">
+      <section className="experiences-catalog section compass-bg" id="atividades">
         <div className="wrap">
           <div className="experiences-catalog__heading"><Eyebrow>Todas as vivências</Eyebrow><h2>Há mais de um jeito de se conectar.</h2><p>Escolha uma atividade e fale com a equipe para confirmar local, data, disponibilidade e condições de participação.</p></div>
           <div className="activity-groups">{groups.map(({ title, icon: Icon, copy, image, activities }) => <article className="activity-group" key={title}>
@@ -57,6 +58,6 @@ export default function ExperiencesPage() {
       </section>
     </main>
 
-    <footer className="sail-footer"><div className="wrap"><a className="footer-brand" href="/">CONEXÃO <b>EXO</b><span>∞</span></a><img src="/assets/cadastur%20logo.jpeg" alt="Cadastur — Fazendo o turismo legal"/><p>© Conexão EXO. Todos os direitos reservados.</p></div></footer>
+    <footer className="sail-footer"><div className="wrap"><a className="footer-brand" href="/" aria-label="Conexão EXO — página inicial"><img className="exo-logo" src="/assets/logo-exo-horiz.png" alt="Conexão EXO" /></a><img src="/assets/logo-cadastur-trans.png" alt="Cadastur — Fazendo o turismo legal"/><p>© Conexão EXO. Todos os direitos reservados.</p></div></footer>
   </div>
 }

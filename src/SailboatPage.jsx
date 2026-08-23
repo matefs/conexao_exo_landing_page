@@ -4,10 +4,10 @@ import { Anchor, Check, Compass, MapPin, ShieldCheck, ShipWheel, Users, Waves } 
 import { Button, Eyebrow } from './components/UI'
 import { cssVariables } from './theme'
 
-const bookingUrl = `https://wa.me/5548991109531?text=${encodeURIComponent('Olá! Quero reservar o passeio privativo de veleiro de 6 horas pela Baía Norte de Florianópolis.')}`
+const bookingUrl = `https://wa.me/5548991109531?text=${encodeURIComponent('Olá! Vim pelo site da Conexão EXO e quero reservar o passeio privativo de veleiro pela Baía Norte de Florianópolis.')}`
 
 const benefits = [
-  [Users, 'Passeio privativo', 'Uma experiência exclusiva para até cinco pessoas.'],
+  [Users, 'Passeio privativo', 'Uma experiência exclusiva para até quatro pessoas.'],
   [Waves, 'Paradas para banho', 'Tempo para aproveitar o mar durante o roteiro.'],
   [Compass, 'Vistas panorâmicas', 'A Baía Norte vista de uma perspectiva inesquecível.'],
   [ShieldCheck, 'Conforto e segurança', 'Veleiro confortável para navegar com tranquilidade.'],
@@ -26,7 +26,7 @@ export default function SailboatPage() {
   return <div className="sail-page">
     <header className="sail-header">
       <div className="wrap sail-header__inner">
-        <a className="footer-brand" href="/" aria-label="Conexão EXO — página inicial">CONEXÃO <b>EXO</b><span>∞</span></a>
+        <a className="footer-brand" href="/" aria-label="Conexão EXO — página inicial"><img className="exo-logo" src="/assets/logo-exo-horiz.png" alt="Conexão EXO" /></a>
         <a className="sail-header__back" href="/">Voltar ao site</a>
         <Button href={bookingUrl}>Reservar passeio</Button>
       </div>
@@ -45,10 +45,10 @@ export default function SailboatPage() {
         </div>
       </section>
 
-      <section className="sail-intro section">
+      <section className="sail-intro section compass-bg">
         <div className="wrap sail-intro__grid">
           <div><Eyebrow>Uma experiência só sua</Eyebrow><h2>Navegue com conforto, privacidade e momentos autênticos.</h2></div>
-          <div className="sail-intro__copy"><p>Um passeio privativo para até cinco pessoas, com paradas para banho e vistas panorâmicas da Baía Norte.</p><p>Conheça fortalezas históricas, Jurerê, Praia da Daniela e Ilha do Francês em uma experiência feita para ser lembrada.</p></div>
+          <div className="sail-intro__copy"><p>Um passeio privativo para até quatro pessoas, com paradas para banho e vistas panorâmicas da Baía Norte.</p><p>Conheça fortalezas históricas, Jurerê, Praia da Daniela e Ilha do Francês em uma experiência feita para ser lembrada.</p></div>
         </div>
         <div className="wrap sail-benefits">{benefits.map(([Icon,title,text]) => <article key={title}><Icon size={28}/><h3>{title}</h3><p>{text}</p></article>)}</div>
       </section>
@@ -59,15 +59,15 @@ export default function SailboatPage() {
           <div className="sail-offer__card">
             <span className="sail-offer__deadline">Passeio sob consulta</span>
             <p>Uma experiência privativa</p>
-            <h2>Até 5 pessoas</h2>
+            <h2>Até 4 pessoas</h2>
             <ul><li><Check size={17}/> Veleiro confortável e seguro</li><li><Check size={17}/> Belezas da Baía Norte</li><li><Check size={17}/> Conforto e privacidade durante a navegação</li></ul>
             <Button href={bookingUrl}>Quero reservar</Button>
-            <small>Passeio sujeito à disponibilidade e às condições de navegação.</small>
+            <small>Passeio sujeito a disponibilidade e condições de navegação e climáticas.</small>
           </div>
         </div>
       </section>
 
-      <section className="sail-route section" id="roteiro">
+      <section className="sail-route section compass-bg" id="roteiro">
         <div className="wrap">
           <Eyebrow>Roteiro e destaques</Eyebrow>
           <div className="sail-route__heading"><h2>Da história ao mar aberto.</h2><p>Cinco pontos especiais em uma travessia pela Baía Norte de Florianópolis.</p></div>
@@ -75,7 +75,7 @@ export default function SailboatPage() {
         </div>
       </section>
 
-      <section className="sail-final section">
+      <section className="sail-final section compass-bg">
         <div className="wrap sail-final__inner">
           <ShipWheel size={46}/>
           <p>Vagas limitadas</p>
@@ -87,6 +87,6 @@ export default function SailboatPage() {
       </section>
     </main>
 
-    <footer className="sail-footer"><div className="wrap"><a className="footer-brand" href="/">CONEXÃO <b>EXO</b><span>∞</span></a><img src="/assets/cadastur%20logo.jpeg" alt="Cadastur — Fazendo o turismo legal"/><p>© Conexão EXO. Todos os direitos reservados.</p></div></footer>
+    <footer className="sail-footer"><div className="wrap"><a className="footer-brand" href="/" aria-label="Conexão EXO — página inicial"><img className="exo-logo" src="/assets/logo-exo-horiz.png" alt="Conexão EXO" /></a><img src="/assets/logo-cadastur-trans.png" alt="Cadastur — Fazendo o turismo legal"/><p>© Conexão EXO. Todos os direitos reservados.</p></div></footer>
   </div>
 }

@@ -25,13 +25,16 @@ export function Header() {
       e.preventDefault()
       const target = document.querySelector(href)
       if (target) {
-        setTimeout(() => {
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 76
+          const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight + 80
           if (window.lenis) {
-            window.lenis.scrollTo(target, { offset: -70, duration: 1.1 })
+            window.lenis.scrollTo(targetTop, { duration: 1.1 })
           } else {
-            target.scrollIntoView({ behavior: 'smooth' })
+            window.scrollTo({ top: targetTop, behavior: 'smooth' })
           }
-        }, 60)
+          window.history.replaceState(null, '', href)
+        }))
       }
     }
   }
@@ -45,7 +48,7 @@ export function Header() {
           aria-label="Conexão EXO - início"
           onClick={(e) => handleNavClick(e, '#inicio')}
         >
-          CONEXÃO <b>EXO</b><span>∞</span>
+          <img className="exo-logo" src="/assets/logo-exo-horiz.png" alt="Conexão EXO" />
         </a>
         <nav className={open ? 'nav nav--open' : 'nav'} aria-label="Navegação principal">
           <div className="nav__links">
